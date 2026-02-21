@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="280" viewBox="0 0 400 280">
+  <defs>
+    <linearGradient id="forestsky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1b5e20"/>
+      <stop offset="60%" stop-color="#2e7d32"/>
+      <stop offset="100%" stop-color="#1a3c1a"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="280" fill="url(#forestsky)"/>
+  <!-- Sun rays -->
+  <circle cx="200" cy="60" r="38" fill="#f9c74f" opacity="0.25"/>
+  <circle cx="200" cy="60" r="22" fill="#f9c74f" opacity="0.55"/>
+  <!-- Trees back row -->
+  <polygon points="60,180 80,100 100,180" fill="#1b5e20"/>
+  <polygon points="100,185 125,95 150,185" fill="#2e7d32"/>
+  <polygon points="250,185 275,95 300,185" fill="#1b5e20"/>
+  <polygon points="300,180 320,100 340,180" fill="#2e7d32"/>
+  <!-- Trees front row -->
+  <polygon points="0,280 35,140 70,280" fill="#388e3c"/>
+  <polygon points="140,280 175,120 210,280" fill="#2e7d32"/>
+  <polygon points="195,280 230,130 265,280" fill="#4caf50"/>
+  <polygon points="330,280 365,145 400,280" fill="#388e3c"/>
+  <!-- Path -->
+  <ellipse cx="200" cy="275" rx="50" ry="12" fill="#a1887f" opacity="0.6"/>
+  <rect x="185" y="210" width="30" height="65" fill="#a1887f" opacity="0.4" rx="4"/>
+  <!-- Deer silhouette -->
+  <ellipse cx="205" cy="200" rx="14" ry="9" fill="#5d4037" opacity="0.85"/>
+  <circle cx="217" cy="193" r="6" fill="#5d4037" opacity="0.85"/>
+  <line x1="198" y1="209" x2="196" y2="222" stroke="#5d4037" stroke-width="2.5" opacity="0.85"/>
+  <line x1="207" y1="210" x2="205" y2="223" stroke="#5d4037" stroke-width="2.5" opacity="0.85"/>
+  <line x1="215" y1="208" x2="214" y2="221" stroke="#5d4037" stroke-width="2.5" opacity="0.85"/>
+  <line x1="222" y1="207" x2="222" y2="220" stroke="#5d4037" stroke-width="2.5" opacity="0.85"/>
+  <!-- Label -->
+  <text x="200" y="268" font-family="Inter,Arial,sans-serif" font-size="13" fill="#c8e6c9" text-anchor="middle">🌲 Forest Path</text>
+</svg>

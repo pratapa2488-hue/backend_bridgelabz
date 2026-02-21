@@ -1,0 +1,80 @@
+<%- include('partials/header', { title: 'Users' }) %>
+
+    <div class="container">
+        <div class="page-header flex justify-between items-center">
+            <div>
+                <h1>👥 Users
+                    <% if (query) { %>
+                        <span class="badge">Filtered: "<%= query %>"</span>
+                        <% } %>
+                </h1>
+                <p class="text-muted">
+                    Showing <%= users.length %> of <%= total %> users
+                            <% if (query) { %> matching "<strong>
+                                    <%= query %>
+                                </strong>"<% } %>
+                </p>
+            </div>
+        </div>
+
+        <!-- Exercise 1: Query Param Filter Form -->
+        <form class="search-bar" method="GET" action="/users">
+            <input type="text" name="name" value="<%= query %>" placeholder="🔍  Search users by name..."
+                id="searchInput" />
+            <button class="btn btn-primary" type="submit">Search</button>
+            <% if (query) { %>
+                <a href="/users" class="btn btn-outline">Clear</a>
+                <% } %>
+        </form>
+
+        <% if (users.length===0) { %>
+            <div class="card text-center" style="padding:3rem">
+                <div style="font-size:3rem;margin-bottom:1rem">🔍</div>
+                <h3>No users found</h3>
+                <p class="text-muted mt-1">No users match "<%= query %>". Try a different search term.</p>
+                <a href="/users" class="btn btn-outline mt-2">Show All Users</a>
+            </div>
+            <% } else { %>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Role</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% users.forEach((user, i)=> { %>
+                                <tr>
+                                    <td style="color:var(--text-muted)">
+                                        <%= i + 1 %>
+                                    </td>
+                                    <td><strong>
+                                            <%= user.name %>
+                                        </strong></td>
+                                    <td style="color:var(--text-muted)">
+                                        <%= user.email %>
+                                    </td>
+                                    <td>
+                                        <span class="category-tag">
+                                            <%= user.role %>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <% }) %>
+                        </tbody>
+                    </table>
+                </div>
+                <% } %>
+
+                    <div class="card mt-2" style="background:rgba(108,99,255,0.07);border-color:rgba(108,99,255,0.25)">
+                        <p style="font-size:0.85rem;color:var(--text-muted)">
+                            💡 <strong>Exercise 1 — Query Parameters:</strong>
+                            Try filtering users via the URL: <code>/users?name=ra</code> or <code>/users?name=dev</code>
+                        </p>
+                    </div>
+    </div>
+
+    <%- include('partials/footer') %>
