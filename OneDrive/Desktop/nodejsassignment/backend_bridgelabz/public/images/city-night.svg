@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="280" viewBox="0 0 400 280">
+  <defs>
+    <linearGradient id="nightsky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0b0c2a"/>
+      <stop offset="100%" stop-color="#1a1a4e"/>
+    </linearGradient>
+    <linearGradient id="river" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1a237e"/>
+      <stop offset="50%" stop-color="#3949ab"/>
+      <stop offset="100%" stop-color="#1a237e"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="280" fill="url(#nightsky)"/>
+  <!-- Stars -->
+  <circle cx="50" cy="30" r="1.5" fill="#fff" opacity="0.8"/>
+  <circle cx="120" cy="15" r="1" fill="#fff" opacity="0.7"/>
+  <circle cx="200" cy="25" r="1.5" fill="#fff" opacity="0.9"/>
+  <circle cx="300" cy="10" r="1" fill="#fff" opacity="0.6"/>
+  <circle cx="370" cy="40" r="1.5" fill="#fff" opacity="0.8"/>
+  <circle cx="80" cy="55" r="1" fill="#fff" opacity="0.5"/>
+  <circle cx="330" cy="55" r="1" fill="#fff" opacity="0.7"/>
+  <!-- Buildings -->
+  <rect x="30" y="100" width="40" height="120" fill="#1a237e"/>
+  <rect x="30" y="100" width="40" height="120" fill="#6C63FF" opacity="0.3"/>
+  <rect x="80" y="70" width="50" height="150" fill="#283593"/>
+  <rect x="80" y="70" width="50" height="150" fill="#6C63FF" opacity="0.25"/>
+  <rect x="140" y="50" width="60" height="170" fill="#1a237e"/>
+  <rect x="140" y="50" width="60" height="170" fill="#FF6B6B" opacity="0.15"/>
+  <rect x="210" y="80" width="45" height="140" fill="#283593"/>
+  <rect x="265" y="60" width="55" height="160" fill="#1a237e"/>
+  <rect x="265" y="60" width="55" height="160" fill="#6C63FF" opacity="0.2"/>
+  <rect x="330" y="90" width="40" height="130" fill="#283593"/>
+  <!-- Windows -->
+  <rect x="38" y="108" width="8" height="6" fill="#f9c74f" opacity="0.9" rx="1"/>
+  <rect x="55" y="108" width="8" height="6" fill="#f9c74f" opacity="0.6" rx="1"/>
+  <rect x="38" y="122" width="8" height="6" fill="#f9c74f" opacity="0.5" rx="1"/>
+  <rect x="88" y="80" width="10" height="7" fill="#f9c74f" opacity="0.8" rx="1"/>
+  <rect x="104" y="80" width="10" height="7" fill="#f9c74f" opacity="0.4" rx="1"/>
+  <rect x="88" y="98" width="10" height="7" fill="#4fc3f7" opacity="0.9" rx="1"/>
+  <rect x="148" y="60" width="12" height="8" fill="#f9c74f" opacity="0.9" rx="1"/>
+  <rect x="168" y="60" width="12" height="8" fill="#f9c74f" opacity="0.5" rx="1"/>
+  <rect x="148" y="78" width="12" height="8" fill="#4fc3f7" opacity="0.7" rx="1"/>
+  <rect x="168" y="78" width="12" height="8" fill="#f9c74f" opacity="0.8" rx="1"/>
+  <!-- River -->
+  <rect x="0" y="220" width="400" height="60" fill="url(#river)" opacity="0.8"/>
+  <!-- Reflections -->
+  <rect x="35" y="225" width="30" height="40" fill="#6C63FF" opacity="0.2" rx="2"/>
+  <rect x="88" y="222" width="42" height="50" fill="#f9c74f" opacity="0.1" rx="2"/>
+  <rect x="148" y="220" width="52" height="55" fill="#FF6B6B" opacity="0.1" rx="2"/>
+  <!-- Ground -->
+  <rect x="0" y="215" width="400" height="10" fill="#0d1117"/>
+  <!-- Label -->
+  <text x="200" y="265" font-family="Inter,Arial,sans-serif" font-size="13" fill="#aab4d4" text-anchor="middle">🌃 City at Night</text>
+</svg>

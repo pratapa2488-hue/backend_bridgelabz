@@ -1,0 +1,53 @@
+<%- include('../partials/header', { title: post.title }) %>
+
+    <div class="container-sm">
+        <div class="mb-2">
+            <a href="/blog" class="btn btn-outline btn-sm">← Back to Blog</a>
+        </div>
+
+        <div class="card">
+            <span class="category-tag">
+                <%= post.category %>
+            </span>
+            <h1 style="font-size:1.8rem;margin-top:0.6rem;margin-bottom:0.8rem">
+                <%= post.title %>
+            </h1>
+
+            <div class="post-meta mb-2">
+                <span>✍️ <strong>
+                        <%= post.author %>
+                    </strong></span>
+                <span>📅 <%= post.date %></span>
+            </div>
+
+            <hr style="border:none;border-top:1px solid var(--border);margin-bottom:1.5rem" />
+
+            <div class="post-body">
+                <%= post.content %>
+            </div>
+        </div>
+
+        <!-- Related posts -->
+        <% if (otherPosts.length> 0) { %>
+            <h3 style="margin-top:2rem;margin-bottom:1rem">📚 More Posts</h3>
+            <div class="grid grid-2">
+                <% otherPosts.forEach(p=> { %>
+                    <a href="/blog/<%= p.id %>" style="text-decoration:none">
+                        <div class="card" style="gap:0.4rem;display:flex;flex-direction:column">
+                            <span class="category-tag">
+                                <%= p.category %>
+                            </span>
+                            <strong>
+                                <%= p.title %>
+                            </strong>
+                            <p class="text-muted" style="font-size:0.85rem">
+                                <%= p.excerpt.substring(0, 80) %>...
+                            </p>
+                        </div>
+                    </a>
+                    <% }) %>
+            </div>
+            <% } %>
+    </div>
+
+    <%- include('../partials/footer') %>

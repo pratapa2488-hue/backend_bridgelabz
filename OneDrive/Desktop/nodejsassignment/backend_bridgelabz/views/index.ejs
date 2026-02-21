@@ -1,0 +1,73 @@
+<%- include('partials/header', { title: 'Home' }) %>
+
+    <div class="container">
+        <div class="hero">
+            <h1>⚡ <span>Express</span> Framework Exercises</h1>
+            <p>Six hands-on exercises covering Express.js fundamentals — routing, middleware, EJS templates, and more.
+            </p>
+            <a href="/blog" class="btn btn-primary">📝 View Blog</a>
+            <a href="/users" class="btn btn-outline" style="margin-left:0.5rem">👥 Browse Users</a>
+        </div>
+
+        <div class="grid grid-2">
+            <a href="/users" style="text-decoration:none">
+                <div class="card">
+                    <div style="font-size:2rem;margin-bottom:0.6rem">👥</div>
+                    <h3>Exercise 1 — Query Params</h3>
+                    <p class="text-muted mt-1" style="font-size:0.9rem">Filter users by name using URL query parameters.
+                    </p>
+                    <span class="badge">GET /users?name=</span>
+                </div>
+            </a>
+
+            <div class="card">
+                <div style="font-size:2rem;margin-bottom:0.6rem">⏱️</div>
+                <h3>Exercise 2 — Response-Time Logger</h3>
+                <p class="text-muted mt-1" style="font-size:0.9rem">Global middleware that logs method, URL, status, and
+                    duration for every request.</p>
+                <span class="badge">Middleware</span>
+            </div>
+
+            <a href="/contact" style="text-decoration:none">
+                <div class="card">
+                    <div style="font-size:2rem;margin-bottom:0.6rem">✉️</div>
+                    <h3>Exercise 3 — Contact Form</h3>
+                    <p class="text-muted mt-1" style="font-size:0.9rem">EJS contact form with POST submission and
+                        validation.</p>
+                    <span class="badge">GET + POST</span>
+                </div>
+            </a>
+
+            <a href="/this-page-does-not-exist" style="text-decoration:none">
+                <div class="card">
+                    <div style="font-size:2rem;margin-bottom:0.6rem">🚫</div>
+                    <h3>Exercise 4 — Custom 404 Page</h3>
+                    <p class="text-muted mt-1" style="font-size:0.9rem">Click to trigger the custom 404 error page
+                        rendered with EJS.</p>
+                    <span class="badge">Error Handler</span>
+                </div>
+            </a>
+
+            <a href="/gallery" style="text-decoration:none">
+                <div class="card">
+                    <div style="font-size:2rem;margin-bottom:0.6rem">🖼️</div>
+                    <h3>Exercise 5 — Photo Gallery</h3>
+                    <p class="text-muted mt-1" style="font-size:0.9rem">Dynamic gallery using static files served from
+                        <code>public/images</code>.</p>
+                    <span class="badge">Static + EJS</span>
+                </div>
+            </a>
+
+            <a href="/blog" style="text-decoration:none">
+                <div class="card">
+                    <div style="font-size:2rem;margin-bottom:0.6rem">📝</div>
+                    <h3>Exercise 6 — Simple Blog</h3>
+                    <p class="text-muted mt-1" style="font-size:0.9rem">Full blog with list, view individual posts, and
+                        create new posts.</p>
+                    <span class="badge">CRUD Routes</span>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <%- include('partials/footer') %>

@@ -1,0 +1,56 @@
+<%- include('../partials/header', { title: 'Blog' }) %>
+
+    <div class="container">
+        <div class="page-header flex justify-between items-center">
+            <div>
+                <h1>📝 Blog</h1>
+                <p class="text-muted">
+                    <%= posts.length %> post(s) published
+                </p>
+            </div>
+            <a href="/blog/new" class="btn btn-accent">✏️ New Post</a>
+        </div>
+
+        <% if (posts.length===0) { %>
+            <div class="card text-center" style="padding:3rem">
+                <div style="font-size:3rem;margin-bottom:1rem">📭</div>
+                <h3>No posts yet</h3>
+                <p class="text-muted mt-1">Be the first to write something!</p>
+                <a href="/blog/new" class="btn btn-primary mt-2">✏️ Create First Post</a>
+            </div>
+            <% } else { %>
+                <div class="grid" style="gap:1rem">
+                    <% posts.forEach(post=> { %>
+                        <a href="/blog/<%= post.id %>" style="text-decoration:none">
+                            <div class="card" style="display:flex;flex-direction:column;gap:0.5rem">
+                                <div>
+                                    <span class="category-tag">
+                                        <%= post.category %>
+                                    </span>
+                                </div>
+                                <h2 style="font-size:1.2rem">
+                                    <%= post.title %>
+                                </h2>
+                                <p class="text-muted" style="font-size:0.9rem">
+                                    <%= post.excerpt %>
+                                </p>
+                                <div class="post-meta">
+                                    <span>✍️ <%= post.author %></span>
+                                    <span>📅 <%= post.date %></span>
+                                </div>
+                            </div>
+                        </a>
+                        <% }) %>
+                </div>
+                <% } %>
+
+                    <div class="card mt-2" style="background:rgba(108,99,255,0.07);border-color:rgba(108,99,255,0.25)">
+                        <p style="font-size:0.85rem;color:var(--text-muted)">
+                            💡 <strong>Exercise 6 — Simple Blog:</strong>
+                            Routes: <code>GET /blog</code> (list), <code>GET /blog/:id</code> (view),
+                            <code>GET /blog/new</code> + <code>POST /blog</code> (create).
+                        </p>
+                    </div>
+    </div>
+
+    <%- include('../partials/footer') %>

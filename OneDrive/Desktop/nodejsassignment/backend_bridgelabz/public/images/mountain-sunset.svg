@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="280" viewBox="0 0 400 280">
+  <defs>
+    <linearGradient id="mountainsky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ff6b6b"/>
+      <stop offset="40%" stop-color="#ffa559"/>
+      <stop offset="100%" stop-color="#ffcc70"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="280" fill="url(#mountainsky)"/>
+  <!-- Sun setting -->
+  <circle cx="200" cy="170" r="55" fill="#ffee93" opacity="0.5"/>
+  <circle cx="200" cy="170" r="38" fill="#ffd166" opacity="0.8"/>
+  <!-- Mountains back -->
+  <polygon points="0,220 100,80 200,220" fill="#546e7a" opacity="0.7"/>
+  <polygon points="100,220 220,60 340,220" fill="#455a64" opacity="0.85"/>
+  <polygon points="200,220 310,90 400,220" fill="#546e7a" opacity="0.75"/>
+  <!-- Snow caps -->
+  <polygon points="220,60 232,85 208,85" fill="#eceff1"/>
+  <polygon points="100,80 112,105 88,105" fill="#eceff1"/>
+  <!-- Ground -->
+  <rect x="0" y="218" width="400" height="62" fill="#263238"/>
+  <!-- River reflection -->
+  <ellipse cx="200" cy="240" rx="80" ry="18" fill="#ffd166" opacity="0.25"/>
+  <ellipse cx="200" cy="248" rx="60" ry="12" fill="#ffd166" opacity="0.15"/>
+  <!-- Label -->
+  <text x="200" y="270" font-family="Inter,Arial,sans-serif" font-size="13" fill="#ffcc70" text-anchor="middle">🏔️ Mountain Sunset</text>
+</svg>

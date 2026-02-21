@@ -1,0 +1,65 @@
+<%- include('../partials/header', { title: 'New Post' }) %>
+
+    <div class="container-sm">
+        <div class="page-header">
+            <a href="/blog" class="btn btn-outline btn-sm mb-2" style="display:inline-flex">← Back to Blog</a>
+            <h1>✏️ Create New Post</h1>
+            <p class="text-muted">Share your thoughts with the world.</p>
+        </div>
+
+        <% if (error) { %>
+            <div class="alert alert-error">⚠️ <%= error %>
+            </div>
+            <% } %>
+
+                <div class="card">
+                    <form method="POST" action="/blog" id="blogForm">
+
+                        <div class="form-group">
+                            <label for="title">Title <span style="color:var(--accent)">*</span></label>
+                            <input type="text" id="title" name="title" placeholder="Enter a compelling title..."
+                                value="<%= formData.title || '' %>" required />
+                        </div>
+
+                        <div class="grid grid-2">
+                            <div class="form-group">
+                                <label for="author">Author <span style="color:var(--accent)">*</span></label>
+                                <input type="text" id="author" name="author" placeholder="Your name"
+                                    value="<%= formData.author || '' %>" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="category">Category</label>
+                                <select id="category" name="category">
+                                    <% ['Tutorial','Guide','Deep Dive','Opinion','News','General'].forEach(cat=> { %>
+                                        <option value="<%= cat %>" <%=formData.category===cat ? 'selected' : '' %>><%=
+                                                cat %>
+                                        </option>
+                                        <% }) %>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="excerpt">Short Excerpt <span
+                                    style="color:var(--text-muted)">(optional)</span></label>
+                            <input type="text" id="excerpt" name="excerpt"
+                                placeholder="Brief summary shown on the blog list..."
+                                value="<%= formData.excerpt || '' %>" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="content">Content <span style="color:var(--accent)">*</span></label>
+                            <textarea id="content" name="content" style="min-height:200px"
+                                placeholder="Write your full post content here..."
+                                required><%= formData.content || '' %></textarea>
+                        </div>
+
+                        <div class="flex gap-1">
+                            <button type="submit" class="btn btn-primary" id="publishBtn">🚀 Publish Post</button>
+                            <a href="/blog" class="btn btn-outline">Cancel</a>
+                        </div>
+                    </form>
+                </div>
+    </div>
+
+    <%- include('../partials/footer') %>
